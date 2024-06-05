@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toggle Contenteditable</title>
+</head>
+<body>
+
+<div id="editableDiv" contenteditable="false">이 텍스트를 편집할 수 없습니다.</div>
+<button id="toggleButton">Toggle Edit Mode</button>
+
+</body>
+<script>
+	
+	
+	document.getElementById('toggleButton').addEventListener('click',function(){
+		var div = document.getElementById('editableDiv');
+		if( div.contentEditable === "true"){
+			div.contentEditable = "false";
+		}else {
+			div.contentEditable = "true";
+		}
+	});
+	
+
+</script>
+</html>
